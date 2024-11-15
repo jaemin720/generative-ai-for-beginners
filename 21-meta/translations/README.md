@@ -11,7 +11,7 @@
 
  이 강의에서는 Meta 패밀리와 "Llama Herd"의 두가지 모델인 Llama 3.1과 Llama 3.2에 대해 알아보겠습니다. 
  
- 이 모델들은 다양한 변형 버전으로 제공되며, GitHub 모델 마켓플레이스에서 사용할 수 있습니다. GitHub 모델을 통해 [AI 모델을 사용하여 프로토타입](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).을 만드는 자세한 내용은 다음과 같습니다.
+ 이 모델들은 다양한 변형 버전으로 제공되며, GitHub 모델 마켓플레이스에서 사용할 수 있습니다. GitHub 모델을 통해 [AI 모델을 사용하여 프로토타입](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)을 만드는 자세한 내용은 다음과 같습니다.
 
 
 모델 변형:
@@ -22,7 +22,8 @@
 
 Llama 3 모델도 GitHub 모델에 제공되지만, 이 강의에서는 다루지 않습니다.
 
-*Note: Llama 3 is also available on Github Models but won't be covered in this lesson*
+*참고: Llama 3는 깃허브 모델에서도 사용할 수 있지만 이 레슨에서는 다루지 않습니다.*
+
 
 ## Llama 3.1
 
@@ -47,7 +48,7 @@ Llama 3.1은 함수나 도구 호출을 더 효과적으로 수행하도록 미�
 - **Brave Search** - 날씨와 같은 최신 정보를 얻기 위해 웹 검색 수행
 - **Wolfram Alpha** - 복잡한 수학 계산을 수행하여 사용자가 직접 함수를 작성할 필요가 없음
 
-You can also create your own custom tools that LLM can call. 
+여러분은 LLM에서 호출할 수 있는 사용자 지정 도구를 직접 만들 수도 있습니다. 
 
 ### 아래의 코드 예제에서는:
 
@@ -55,7 +56,7 @@ You can also create your own custom tools that LLM can call.
 - 특정 도시의 날씨를 묻는 사용자 프롬프트를 보냅니다.
 - LLM은 Brave Search 도구 호출을 통해 응답하며, 다음과 같이 보입니다: `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*참고: 이 예제는 도구 호출만 수행하며, 실제 결과를 얻으려면 Brave API 페이지에서 무료 계정을 생성하고 함수를 정의해야 합니다.
+*참고: 이 예제는 도구 호출만 수행하며, 실제 결과를 얻으려면 Brave API 페이지에서 무료 계정을 생성하고 함수를 정의해야 합니다.*
 
 ```python 
 import os
@@ -103,7 +104,7 @@ print(response.choices[0].message.content)
 - 작은 크기부터 중간 크기까지의 변형(11B 및 90B): 유연한 배포 옵션 제공
 - 텍스트 전용 변형(1B 및 3B): 에지/모바일 장치에서 모델을 배포할 수 있으며 저지연성을 제공
 
-The multimodal support represents a big step in the world of open source models. The code example below takes both an image and text prompt to get an analysis of the image from Llama 3.2 90B. 
+멀티모달 지원은 오픈 소스 모델의 세계에서 큰 진전을 의미합니다. 아래 코드 예제는 이미지와 텍스트 프롬프트를 모두 사용하여 Llama 3.2 90B에서 이미지를 분석하는 예제입니다. 
 
 
 ### Multimodal Support with Llama 3.2
@@ -152,10 +153,9 @@ response = client.complete(
 
 print(response.choices[0].message.content)
 ```
+## 배움은 끝나지 않습니다. 계속 나아갑시다!
+이번 강의를 마치고 나서, [생성형 AI 학습 모음집](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여, 계속해서 생성형 AI의 지식을 쌓아갑시다.
 
-## Learning does not stop here, continue the Journey
-
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
 
 
